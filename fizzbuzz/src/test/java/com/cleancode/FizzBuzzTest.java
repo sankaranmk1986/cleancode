@@ -30,5 +30,10 @@ public class FizzBuzzTest {
 		assertThat(FizzBuzz.getAnswerFor(15), is("FizzBuzz"));
 		assertThat(FizzBuzz.getAnswerFor(30), is("FizzBuzz"));
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void shouldThrowErrorForNumbersLessThanOne() {
+		FizzBuzz.getAnswerFor(0);
+	}
 
 }
