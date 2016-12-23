@@ -1,14 +1,20 @@
 package com.cleancode;
 
 import static org.hamcrest.CoreMatchers.is;
-import org.junit.Assert;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Test;
 
 public class FizzBuzzTest {
 	
 	@Test
 	public void shouldReturnNumberForOne(){
-		Assert.assertThat(FizzBuzz.getAnswerFor(1), is("1"));
-	}
-
+		assertThat(FizzBuzz.getAnswerFor(1), is("1"));
+	}	
+	
+	@Test
+	public void shouldReturnNumberForTwo(){
+		assertThat(FizzBuzz.getAnswerFor(2), is("2"));
+	}	
+	
 }
