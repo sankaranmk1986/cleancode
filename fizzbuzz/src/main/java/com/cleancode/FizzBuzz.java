@@ -3,6 +3,7 @@ package com.cleancode;
 public class FizzBuzz {
 	
 	public static String getAnswerFor(int number){
+		validateNumber(number);
 		String output=String.valueOf(number);
 		if(isDivisibleByThree(number) && isDivisibleByFive(number)){
 			output="FizzBuzz";
@@ -12,6 +13,12 @@ public class FizzBuzz {
 			output="Buzz";
 		}
 		return output;
+	}
+	
+	private static void validateNumber(int number){
+		if(number < 1){
+			throw new IllegalArgumentException();
+		}
 	}
 
 	private static boolean isDivisibleByFive(int number) {
