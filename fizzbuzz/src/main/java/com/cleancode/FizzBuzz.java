@@ -3,14 +3,15 @@ package com.cleancode;
 public class FizzBuzz {
 	
 	public static String getAnswerFor(int number){
+		String output=String.valueOf(number);
 		if(isDivisibleByThree(number) && isDivisibleByFive(number)){
-			return "FizzBuzz";
+			output="FizzBuzz";
 		}else if(isDivisibleByThree(number)){
-			return "Fizz";
+			output="Fizz";
 		}else if(isDivisibleByFive(number)){
-			return "Buzz";
+			output="Buzz";
 		}
-		return String.valueOf(number);
+		return output;
 	}
 
 	private static boolean isDivisibleByFive(int number) {
