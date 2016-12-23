@@ -3,10 +3,11 @@ package com.cleancode;
 public class FizzBuzz {
 	
 	public static String getAnswerFor(int number){
-		if(isDivisibleByThree(number)){
+		if(isDivisibleByThree(number) && isDivisibleByFive(number)){
+			return "FizzBuzz";
+		}else if(isDivisibleByThree(number)){
 			return "Fizz";
-		}
-		if(isDivisibleByFive(number)){
+		}else if(isDivisibleByFive(number)){
 			return "Buzz";
 		}
 		return String.valueOf(number);
