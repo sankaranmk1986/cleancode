@@ -37,5 +37,10 @@ public class FizzBuzzTest {
 		assertThat(FizzBuzz.getAnswerFor(10), is("Buzz"));
 	}
 	
+	@Test
+	public void shouldReturnFizzBizzForFifteen() {
+		assertThat(FizzBuzz.getAnswerFor(15), is("FizzBuzz"));
+	}
+	
 	
 }
