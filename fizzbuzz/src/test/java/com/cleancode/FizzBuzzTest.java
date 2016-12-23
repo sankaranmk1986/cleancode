@@ -8,42 +8,27 @@ import org.junit.Test;
 public class FizzBuzzTest {
 
 	@Test
-	public void shouldReturnNumberForOne() {
+	public void shouldReturnNumberForNumbersNotDivisbleByThreeAndFive() {
 		assertThat(FizzBuzz.getAnswerFor(1), is("1"));
-	}
-
-	@Test
-	public void shouldReturnNumberForTwo() {
 		assertThat(FizzBuzz.getAnswerFor(2), is("2"));
 	}
 
 	@Test
-	public void shouldReturnFizzForThree() {
+	public void shouldReturnFizzForNumbersDivisibleByThree() {
 		assertThat(FizzBuzz.getAnswerFor(3), is("Fizz"));
-	}
-
-	@Test
-	public void shouldReturnFizzForSix() {
 		assertThat(FizzBuzz.getAnswerFor(6), is("Fizz"));
 	}
 
 	@Test
-	public void shouldReturnBizzForFive() {
+	public void shouldReturnBizzForNumbersDivisibleByFive() {
 		assertThat(FizzBuzz.getAnswerFor(5), is("Buzz"));
-	}
-	
-	@Test
-	public void shouldReturnBizzForTen() {
 		assertThat(FizzBuzz.getAnswerFor(10), is("Buzz"));
 	}
-	
+
 	@Test
-	public void shouldReturnFizzBizzForFifteen() {
+	public void shouldReturnFizzBizzForNumbersDivisbleByFifteen() {
 		assertThat(FizzBuzz.getAnswerFor(15), is("FizzBuzz"));
-	}
-	
-	@Test
-	public void shouldReturnFizzBizzForThirty() {
 		assertThat(FizzBuzz.getAnswerFor(30), is("FizzBuzz"));
 	}
+
 }
