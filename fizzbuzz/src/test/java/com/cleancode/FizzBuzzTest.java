@@ -18,7 +18,12 @@ public class FizzBuzzTest {
 	}	
 	
 	@Test
-	public void shouldReturnNumberForThree(){
+	public void shouldReturnFizzForThree(){
 		assertThat(FizzBuzz.getAnswerFor(3), is("Fizz"));
+	}	
+	
+	@Test
+	public void shouldReturnFizzForSix(){
+		assertThat(FizzBuzz.getAnswerFor(6), is("Fizz"));
 	}	
 }
