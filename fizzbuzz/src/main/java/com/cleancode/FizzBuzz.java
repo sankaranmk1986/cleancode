@@ -2,7 +2,7 @@ package com.cleancode;
 
 public class FizzBuzz {
 	
-	public static String getAnswerFor(int number){
+	public String getAnswerFor(int number){
 		validateNumber(number);
 		String output=String.valueOf(number);
 		if(isDivisibleByThree(number) && isDivisibleByFive(number)){
@@ -15,17 +15,17 @@ public class FizzBuzz {
 		return output;
 	}
 	
-	private static void validateNumber(int number){
+	private void validateNumber(int number){
 		if(number < 1){
 			throw new IllegalArgumentException();
 		}
 	}
 
-	private static boolean isDivisibleByFive(int number) {
+	private boolean isDivisibleByFive(int number) {
 		return number%5 == 0;
 	}
 
-	private static boolean isDivisibleByThree(int number) {
+	private boolean isDivisibleByThree(int number) {
 		return number%3 == 0;
 	}
 
